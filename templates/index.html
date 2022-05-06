@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CLI Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="home" class="home">
+        <nav class="navbar">
+            <div class="navbar">
+            <a href="#home" class="home">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="#about" class="about">About</a>&nbsp;&nbsp;&nbsp;
+            <a href="#table" class="table">Table</a>&nbsp;&nbsp;&nbsp;
+            <a href="#contact" class="contact">Contact</a>&nbsp;&nbsp;&nbsp;
+        </div>
+        </nav>
+        <h1 class="name">The CLI Restaurant</h1>
+        <h1 class="desc">Worlds No.1 Restaurant</h1>
+    </section>
+    <section id="about" class="about">
+        <h1 class="about-h1">About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis placeat excepturi laboriosam, minus ea consequatur dicta adipisci quaerat vitae, amet dolorum deleniti cum repudiandae veniam architecto! Rerum sed harum nam iste itaque quo commodi ipsum numquam provident dolorem voluptatibus sunt, eligendi velit ad, dolor perspiciatis! Corporis eius eos quis debitis. Laudantium tempora nostrum ex quos vel dolor explicabo cum nam libero deleniti harum dolorem cupiditate neque quod fugit, possimus ullam, non dignissimos rerum aliquid id quasi quae! Laborum ipsum eveniet repellat, iusto quibusdam voluptatibus, maxime vero harum perferendis velit excepturi culpa beatae. Soluta temporibus, culpa porro laboriosam delectus quis?</p>
+    </section>
+    <section id="table" class="table">
+        <h1 class="table-h1">Table reservation</h1>
+        {% block title %}{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text">
+            <label for="mobilenumber">Mobilenumber</label>
+            <input id="mobilenumber" name="mobilenumber" type="text">
+            <label for="numberpers">Number of people:</label>
+            <input id="numberpers" name="numberpers" type="text">
+
+            
+        
+        <input type="submit" value="Submit" class="button">
+    </form>
+{% endblock %}
+    </section>
+    <section id="contact" class="contact"></section>
+    <style>
+        
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  font: 1.25rem / 1.5 sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+        input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid lightblue;
+            border-radius: 4px;
+            position: relative;
+            right:-9vw;
+            
+        }
+        
+        *{
+            margin:0;
+            font-family: 'Oleo Script', cursive;
+            scroll-behavior: smooth;
+        }
+        section.home {
+            background: url(pic.jpg),rgba(0, 0, 0, 0.719);
+            
+            background-blend-mode: multiply;
+            background-size:100vw;
+            height:100vh;
+        }
+        section.about {
+            background-color:green;
+            height:100vh;
+        }
+        section.table {
+            background-color:blue;
+            height:100vh;
+        }
+        h1.name {
+            font-size:10vw;
+            text-align:center;
+            top:30vh;
+            color:white;
+            position:relative;
+        }
+        h1.desc{
+            text-align:center;
+            position:relative;
+            color:white;
+            font-size:3vw;
+            top:40vh;
+        }
+        nav.navbar{
+            background-color:white;
+            float:right;
+            width:100vw;
+            position:fixed;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+            font-size: 2.5vw;
+        }
+        a:hover{
+            background-color:rgb(53, 53, 53);
+            color:white;
+
+            
+        }
+        div.navbar{
+            float:right;
+        }
+        h1.about-h1{
+            font-size:10vw;
+        }
+        p{
+            font-size:4vh;
+        }
+        section.about{
+            background-color:rgb(200, 200, 200);
+        }
+        section.table{
+            background-color:white;
+            height:94vh;
+        }
+        .table-h1{
+            font-size:5vw;
+        }
+        label {
+            font-size:2vw;
+        }
+        .wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  left:30vw;
+  position: relative;
+  }
+
+input[type="submit"]:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+    </style>
+</body>
+</html>
