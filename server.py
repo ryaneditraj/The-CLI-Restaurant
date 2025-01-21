@@ -3,9 +3,9 @@ import smtplib
 
 
 server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-sender_email = "ryansfreefire@gmail.com"
-sender_pass = "ryansfreefire123"
-recipients_email = "ryansfreefire@gmail.com"
+sender_email = "senderemail@gmail.com"
+sender_pass = "senderpass"
+recipients_email = "reciever@gmail.com"
 server.login(sender_email, sender_pass)
 
 
