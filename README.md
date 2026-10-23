@@ -215,7 +215,7 @@ You can fork it as a starting point. As it stands, it has no accounts, no paymen
 
 ### Why were passwords removed from the code?
 
-An old commit stored a mailbox password in `server.py`. Later commits replaced it with placeholders, and the current code reads secrets from the environment. Git history was not rewritten. Maintainers should rotate that mailbox password. Details are in [SECURITY.md](SECURITY.md).
+A mailbox credential was committed in e2b8b1a and has been rotated. Mail settings now come from the environment. See [SECURITY.md](SECURITY.md).
 
 ## Roadmap
 
