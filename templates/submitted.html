@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>{% if name %}Reservation received{% else %}Reservation not sent{% endif %} · The CLI Restaurant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% if name %}
+    <h1 class="confirm">Dear {{ name }}, Please expect a call from us shortly.</h1>
+    {% else %}
+    <h1 class="confirm">{{ heading }}</h1>
+    {% endif %}
+    <p class="confirm-links"><a href="{{ url_for('index') }}">Back to The CLI Restaurant</a></p>
+</body>
+</html>

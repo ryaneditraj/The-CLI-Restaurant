@@ -1,0 +1,4 @@
+# The Flask app serves this file at /robots.txt and appends a Sitemap line
+# for the current host (or SITE_URL, when that is set).
+User-agent: *
+Allow: /
