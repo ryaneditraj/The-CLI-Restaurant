@@ -1,0 +1,295 @@
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  font: 1.25rem / 1.5 sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid lightblue;
+  border-radius: 4px;
+  position: relative;
+  right: -9vw;
+}
+
+* {
+  margin: 0;
+  font-family: "Oleo Script", cursive;
+  scroll-behavior: smooth;
+}
+
+section.home {
+  background: url("/static/pic.jpg"), rgba(0, 0, 0, 0.719);
+  background-color: #161616;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5.5rem 1.5rem 3rem;
+}
+
+section.about {
+  background-color: green;
+  height: 100vh;
+}
+
+section.table {
+  background-color: blue;
+  height: 100vh;
+}
+
+h1.name {
+  font-size: clamp(3.4rem, 8vw, 7.4rem);
+  line-height: 0.95;
+  text-align: center;
+  color: white;
+  position: static;
+  width: 100%;
+}
+
+h1.desc {
+  text-align: center;
+  position: static;
+  color: white;
+  font-size: clamp(1.35rem, 3vw, 2.5rem);
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+nav.navbar {
+  background-color: white;
+  float: right;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5vw;
+}
+
+a:hover {
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+div.navbar {
+  float: right;
+}
+
+h1.about-h1 {
+  font-size: 10vw;
+}
+
+p {
+  font-size: 4vh;
+}
+
+section.about {
+  background-color: rgb(200, 200, 200);
+}
+
+section.table {
+  background-color: white;
+  height: auto;
+  min-height: 0;
+  padding: 3.5rem 0 4.5rem;
+}
+
+.table-h1 {
+  font-size: 5vw;
+  text-align: center;
+}
+
+section.table form {
+  width: min(36rem, 92%);
+  margin: 1.5rem auto 0;
+}
+
+section.table label {
+  display: block;
+  margin-top: 0.85rem;
+}
+
+section.table input[type="text"] {
+  width: 100%;
+  right: auto;
+  left: auto;
+}
+
+section.table input[type="submit"] {
+  left: auto;
+  display: block;
+  margin: 1.6rem auto 0;
+}
+
+label {
+  font-size: 2vw;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  left: 30vw;
+  position: relative;
+}
+
+input[type="submit"]:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+section {
+  scroll-margin-top: 4.5rem;
+}
+
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #0b6e4f;
+  outline-offset: 2px;
+}
+
+p.form-error {
+  color: #8f1d1d;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 40rem;
+}
+
+section.faq,
+section.contact {
+  padding: 6vh 6vw 10vh;
+}
+
+section.faq {
+  background: #ffffff;
+}
+
+section.contact {
+  background: #f4f1ea;
+}
+
+section.faq h1,
+section.contact h1 {
+  font-size: 5vw;
+}
+
+section.faq h2 {
+  font-size: 3vh;
+  margin-top: 3vh;
+}
+
+section.faq p,
+section.contact p {
+  font-size: 2.6vh;
+  max-width: 70ch;
+}
+
+section.about p {
+  max-width: 80ch;
+}
+
+h1.confirm {
+  font-size: 5vw;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-top: 12vh;
+  padding: 0 8vw;
+}
+
+p.confirm-links {
+  text-align: center;
+  margin-top: 4vh;
+  font-size: 2rem;
+}
+
+@media (max-width: 720px) {
+  div.navbar {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  nav.navbar a,
+  a {
+    font-size: 1.05rem;
+  }
+
+  section.table input[type="text"],
+  input[type="text"] {
+    width: 100%;
+    right: auto;
+    left: auto;
+  }
+
+  section.table input[type="submit"],
+  input[type="submit"] {
+    left: auto;
+  }
+
+  label,
+  section.table label {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  h1.name {
+    font-size: 3.15rem;
+  }
+
+  h1.desc {
+    font-size: 1.35rem;
+  }
+
+  h1.about-h1,
+  .table-h1,
+  section.faq h1,
+  section.contact h1 {
+    font-size: 12vw;
+  }
+
+  h1.confirm {
+    font-size: 8vw;
+  }
+}

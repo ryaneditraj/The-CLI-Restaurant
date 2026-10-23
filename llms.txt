@@ -1,0 +1,33 @@
+# The CLI Restaurant
+
+> Open-source Python project by Ryan Editraj: a command-line restaurant order pad and a Flask table-reservation website.
+
+This repository is a small restaurant-management demo. It is not a hosted restaurant, it does not take payment, and it does not sell food. Reservations are not stored in a database. When email is configured, a booking or an order is sent to the address in the server environment.
+
+## Docs
+
+- [README](https://github.com/ryaneditraj/The-CLI-Restaurant/blob/main/README.md): Install, usage, features, FAQ, and screenshots
+- [Security policy](https://github.com/ryaneditraj/The-CLI-Restaurant/blob/main/SECURITY.md): How to report a vulnerability
+- [Contributing](https://github.com/ryaneditraj/The-CLI-Restaurant/blob/main/CONTRIBUTING.md): Local setup, tests, and pull requests
+- [License](https://github.com/ryaneditraj/The-CLI-Restaurant/blob/main/LICENSE): MIT
+
+## Run
+
+- Table booking website: `python server.py`, then open http://127.0.0.1:5000
+- Terminal orders: `python The-Cli-Restaurant.py`
+- New menu-item snippet: `python new-product.py`
+- Optional Flask-Mail demo: `python app.py`
+
+## Routes
+
+- `/` reservation page
+- `/sign-up` stub, returns "not available"
+- `/robots.txt`
+- `/sitemap.xml` host-aware when the app is running
+- `/llms.txt`
+- `/.well-known/security.txt`
+
+## Author
+
+- https://github.com/ryaneditraj
+- https://instagram.com/ryaneditraj

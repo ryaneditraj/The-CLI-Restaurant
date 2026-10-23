@@ -1,11 +1,26 @@
-import re
-import smtplib
+#!/usr/bin/env python3
+from config import clean_text
+from mailer import send_email
 
-server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-sender_email = "Sender Email"
-sender_pass = "Sender Password"
-recipients_email = "Recipient Email"
-server.login(sender_email, sender_pass)
+
+def send_order_email():
+    safe_table = clean_text(table_no, 32)
+    safe_items = clean_text(items, 500)
+    result = send_email(
+        subject=f"Table {safe_table} order",
+        body=f"Table Number {safe_table} ordered {safe_items} .",
+    )
+    if result == "sent":
+        return True
+    if result == "skipped":
+        print(
+            "Email is not configured. Set SENDER_EMAIL, SENDER_PASSWORD, and RECIPIENT_EMAIL in .env."
+        )
+    else:
+        print("Could not send email. Check the SMTP settings in .env.")
+    return False
+
+
 print("""
 
 ████████╗██╗░░██╗███████╗  ░█████╗░██╗░░░░░██╗
@@ -22,12 +37,11 @@ print("""
 ██║░░██║███████╗██████╔╝░░░██║░░░██║░░██║╚██████╔╝██║░░██║██║░░██║██║░╚███║░░░██║░░░
 ╚═╝░░╚═╝╚══════╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░
 """)
-table_no = input("Table no >")
-def sendmail():
-    server.sendmail(str(sender_email),
-                    recipients_email,
-                    f"Table Number {table_no} ordered {items} .")
-    
+try:
+    table_no = input("Table no >")
+except EOFError:
+    raise SystemExit(0)
+
 hitems = ""
 
 items = ""
@@ -60,9 +74,15 @@ while run == 1:
 
     """)
     
-    option = int(input(">"))
+    try:
+        option = int(input(">"))
+    except ValueError:
+        print("Please enter a number from the menu.")
+        continue
+    except EOFError:
+        raise SystemExit(0)
     if option == 99:
-        exit()
+        raise SystemExit(0)
     if option == 1:
         print("burger coming up")
         burger_no = str(input("How Many: "))
@@ -172,11 +192,8 @@ while run == 1:
         print(items)
         hitems = items
     
-    if option == 00:
-        sendmail()
-        print("Email sent.")
-        print("Thank you ,closing this app")
-        exit()
-
-
-server.quit() 
+    if option == 0:
+        if send_order_email():
+            print("Email sent.")
+            print("Thank you ,closing this app")
+            raise SystemExit(0) 

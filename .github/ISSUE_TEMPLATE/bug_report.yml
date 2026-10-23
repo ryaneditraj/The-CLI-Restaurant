@@ -1,0 +1,37 @@
+name: Bug report
+description: Something in the terminal menu or the booking site does not work.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the command you ran (python server.py or python The-Cli-Restaurant.py) and the input you typed.
+      placeholder: |
+        1. python server.py
+        2. Open http://127.0.0.1:5000
+        3. Submit the reservation form
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Python version
+      placeholder: 3.12.3
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste the traceback if there is one. Remove passwords and guest phone numbers first.
+    validations:
+      required: false
