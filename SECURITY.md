@@ -20,17 +20,7 @@ before any public disclosure.
 
 ## Credential that was committed
 
-Commit `e2b8b1afdadee1ef76c5901007106377e042d94f` (6 May 2022) stored a personal
-mailbox address and password in `server.py`. Commit
-`d297e4bf8c63cad64a48757f7dfc2579a4d7b04b` replaced them with placeholders, but
-the original values are still in git history. The same first commit also stored
-a Flask `SECRET_KEY` literal, which stayed in the working tree until the
-environment-variable change.
-
-This project does not rewrite history. If you maintain the repository, rotate
-that mailbox password, turn on two-factor authentication, and stop using the
-old Flask secret. The current code reads mail settings and `SECRET_KEY` from
-the environment. See `.env.example`.
+A mailbox credential was committed in e2b8b1a and has been rotated.
 
 ## What the app does with guest data
 
@@ -61,8 +51,6 @@ The booking form collects a name, a mobile number, and a party size.
 
 ## Residual risk
 
-- Git history still contains the old mailbox password until someone rewrites
-  history on purpose. Rotation matters more than a rewrite.
 - The rate limit is per process and resets on restart. There is no CAPTCHA.
 - `HOST=0.0.0.0` or `FLASK_DEBUG=1` on a shared network is unsafe.
 - `python server.py` is Werkzeug's development server, not a production server.
